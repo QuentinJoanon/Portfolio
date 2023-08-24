@@ -13,14 +13,6 @@ const projects = [
     github: 'https://github.com/QuentinJoanon/VictoryZone-Front',
     website: 'https://victoryzone.team/',
   },
-  {
-    name: 'VictoryZone',
-    description:
-      "VictoryZone est une plateforme de suivi d'équipe Esport issue de la reconversion professionnelle dans le domaine du numérique.",
-    image: '/victoryzone.png',
-    github: 'https://github.com/QuentinJoanon/VictoryZone-Front',
-    website: 'https://victoryzone.team/',
-  },
 ];
 
 const ProjectsSection = () => {
@@ -36,13 +28,13 @@ const ProjectsSection = () => {
             <div key={index}>
               <SlideUp offset="-300px 0px -300px 0px">
                 <div className="animation-delay-2 flex animate-slideUpCubicBezier flex-col md:flex-row md:space-x-12">
-                  <div className="md:w-1/2">
+                  <div className="object-contain md:w-1/2">
                     <Link href={project.website} target="blank">
                       <Image
                         src={project.image}
                         alt=""
                         width={1000}
-                        height={1000}
+                        height={800}
                         className="rounded-xl shadow-xl transition-opacity hover:opacity-70"
                       />
                     </Link>
