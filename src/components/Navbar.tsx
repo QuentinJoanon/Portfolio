@@ -11,10 +11,10 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
-  { label: 'Accueil', page: '/' },
-  { label: 'À propos', page: '/about' },
-  { label: 'Projets', page: '/projects' },
-  { label: 'Contact', page: '/contact' },
+  { label: 'Accueil', page: 'home' },
+  { label: 'À propos', page: 'about' },
+  { label: 'Projets', page: 'projects' },
+  // { label: 'Contact', page: 'https://www.linkedin.com/in/quentin-joanon/' },
 ];
 
 const Navbar = () => {
@@ -51,7 +51,7 @@ const Navbar = () => {
                     key={idx}
                     to={item.page}
                     className={
-                      'block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 lg:inline-block'
+                      'block cursor-pointer text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 lg:inline-block'
                     }
                     activeClass="active"
                     spy={true}
@@ -64,6 +64,15 @@ const Navbar = () => {
                   </Link>
                 );
               })}
+              <a
+                href="https://www.linkedin.com/in/quentin-joanon/"
+                target="_blank"
+                rel="noreferrer"
+                className="block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 lg:inline-block"
+              >
+                Contact
+              </a>
+
               {currentTheme === 'dark' ? (
                 <button
                   onClick={() => setTheme('light')}
