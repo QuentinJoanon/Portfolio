@@ -11,7 +11,7 @@ const projects = [
       "VictoryZone est une plateforme de suivi d'équipe Esport issue de la reconversion professionnelle dans le domaine du numérique.",
     image: '/victoryzone.webp',
     github: 'https://github.com/QuentinJoanon/VictoryZone-Front',
-    website: 'https://victoryzone.team/',
+    website: 'https://www.victoryzone.team/',
   },
 ];
 
