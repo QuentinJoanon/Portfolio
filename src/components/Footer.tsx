@@ -17,7 +17,7 @@ const Footer = () => {
           >
             <AiOutlineGithub
               size={30}
-              className="cursor-pointer transition-transform hover:-translate-y-1"
+              className="cursor-pointer transition-transform hover:-translate-y-1 dark:text-neutral-100"
             />
           </a>
           <a
@@ -27,7 +27,7 @@ const Footer = () => {
           >
             <AiOutlineLinkedin
               size={30}
-              className="cursor-pointer transition-transform hover:-translate-y-1"
+              className="cursor-pointer transition-transform hover:-translate-y-1 dark:text-neutral-100"
             />
           </a>
         </div>
