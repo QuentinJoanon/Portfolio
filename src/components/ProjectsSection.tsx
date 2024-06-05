@@ -6,12 +6,22 @@ import SlideUp from './SideUp';
 
 const projects = [
   {
+    name: 'MecateamCluster',
+    description:
+      'Le réseau des entreprises de la filière des infrastructures et des engins de travaux ferroviaires.',
+    image: '/mecateamcluster.webp',
+    github: null,
+    website: 'https://www.mecateamcluster.org/',
+    technos: ['Next.js', 'Typescript', 'Wordpress Headless', 'Sass'],
+  },
+  {
     name: 'VictoryZone',
     description:
       "VictoryZone est une plateforme de suivi d'équipe Esport issue de la reconversion professionnelle dans le domaine du numérique.",
     image: '/victoryzone.webp',
     github: 'https://github.com/QuentinJoanon/VictoryZone-Front',
     website: 'https://www.victoryzone.team/',
+    technos: ['Next.js', 'Typescript', 'Sass'],
   },
 ];
 
@@ -45,12 +55,14 @@ const ProjectsSection = () => {
                       {project.description}
                     </p>
                     <div className="flex flex-row space-x-4 align-bottom">
-                      <Link href={project.github} target="blank">
-                        <BsGithub
-                          size={30}
-                          className="cursor-pointer transition-transform hover:-translate-y-1"
-                        />
-                      </Link>
+                      {project.github && (
+                        <Link href={project.github} target="blank">
+                          <BsGithub
+                            size={30}
+                            className="cursor-pointer transition-transform hover:-translate-y-1"
+                          />
+                        </Link>
+                      )}
                       <Link href={project.website} target="blank">
                         {' '}
                         <BsArrowUpRightSquare
@@ -58,6 +70,23 @@ const ProjectsSection = () => {
                           className="cursor-pointer transition-transform hover:-translate-y-1"
                         />
                       </Link>
+                    </div>
+                    <div className="md:w-1/2">
+                      <h2 className="my-6 text-center text-xl font-bold md:text-left">
+                        Technos utilisées
+                      </h2>
+                      <div className="flex flex-wrap justify-center md:justify-start">
+                        {project.technos.map((techno, index) => {
+                          return (
+                            <p
+                              className="mb-2 mr-2 inline-block rounded-full bg-violet-600 px-3 py-1 text-sm font-semibold text-white transition-transform hover:-translate-y-1"
+                              key={index}
+                            >
+                              {techno}
+                            </p>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>
