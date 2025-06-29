@@ -4,7 +4,16 @@ import Link from 'next/link';
 import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs';
 import SlideUp from './SideUp';
 
-const projects = [
+type Project = {
+  name: string;
+  description: string;
+  image: string;
+  github?: string | null;
+  website: string;
+  technos: string[];
+};
+
+const projects: Project[] = [
   {
     name: 'MecateamCluster',
     description:
@@ -15,13 +24,13 @@ const projects = [
     technos: ['Next.js', 'Typescript', 'Wordpress Headless', 'Sass'],
   },
   {
-    name: 'VictoryZone',
+    name: 'Party Memory',
     description:
-      "VictoryZone est une plateforme de suivi d'équipe Esport issue de la reconversion professionnelle dans le domaine du numérique.",
-    image: '/victoryzone.webp',
-    github: 'https://github.com/QuentinJoanon/VictoryZone-Front',
-    website: 'https://www.victoryzone.team/',
-    technos: ['Next.js', 'Typescript', 'Sass'],
+      "Party Memory est une plateforme de création et de partage de souvenir d'évènements et soirées.",
+    image: '/partymemory.png',
+    github: undefined,
+    website: 'https://www.partymemory.com/',
+    technos: ['React', 'Typescript', 'TailwindCss', 'Firebase', 'Shadcn'],
   },
 ];
 

@@ -7,7 +7,7 @@ const Footer = () => {
       <hr className="mx-auto mt-8 h-0.5 w-full border-0 bg-neutral-200" />
       <div className="md: mx-auto flex flex-col justify-between p-4 text-center text-neutral-900 md:flex-row">
         <div className="text-neutral-500 dark:text-neutral-100">
-          © 2023 Quentin Joanon
+          © {new Date().getFullYear()} Quentin Joanon
         </div>
         <div className="mb-1 flex flex-row items-center justify-center space-x-2">
           <a
