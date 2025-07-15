@@ -13,6 +13,22 @@ type Project = {
   technos: string[];
 };
 
+const technoLinks: { [key: string]: string } = {
+  'Next.js': 'https://nextjs.org/',
+  'Typescript': 'https://www.typescriptlang.org/',
+  'Wordpress Headless': 'https://wordpress.org/',
+  'Sass': 'https://sass-lang.com/',
+  'React': 'https://react.dev/',
+  'TailwindCSS': 'https://tailwindcss.com/',
+  'Firebase': 'https://firebase.google.com/',
+  'Shadcn': 'https://ui.shadcn.com/',
+  'Bootstrap': 'https://getbootstrap.com/',
+  'Fabric.js': 'http://fabricjs.com/',
+  'Webpack': 'https://webpack.js.org/',
+  'CSS': 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+  'Responsive Design': 'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design'
+};
+
 const projects: Project[] = [
   {
     name: 'MecateamCluster',
@@ -30,7 +46,25 @@ const projects: Project[] = [
     image: '/partymemory.png',
     github: undefined,
     website: 'https://www.partymemory.com/',
-    technos: ['React', 'Typescript', 'TailwindCss', 'Firebase', 'Shadcn'],
+    technos: ['React', 'Typescript', 'TailwindCSS', 'Firebase', 'Shadcn'],
+  },
+  {
+    name: 'Merci-Facteur',
+    description:
+      "Éditeur en ligne de cartes postales, cartes de condoléances, d'anniversaire, de vœux et autres créations personnalisées.",
+    image: '/mercifacteur.png',
+    github: undefined,
+    website: 'https://www.merci-facteur.com/cartes/r13-deces-et-condoleances/c71-faire-part-deces/9673-faire-part-de-dn-cn-s-no-l-encre-de-chine/#top-from-categries',
+    technos: ['React', 'TailwindCSS', 'Bootstrap', 'Fabric.js'],
+  },
+  {
+    name: 'Wifeo - Landing Pages',
+    description:
+      "Développement de landing pages responsives pour les coaches sportifs, optimisées pour la conversion et l'expérience utilisateur.",
+    image: '/wifeo.png',
+    github: undefined,
+    website: 'https://www.wifeo.com/landing_coach_sportif',
+    technos: ['React', 'Webpack', 'Bootstrap', 'CSS', 'Responsive Design'],
   },
 ];
 
@@ -86,7 +120,19 @@ const ProjectsSection = () => {
                       </h2>
                       <div className="flex flex-wrap justify-center md:justify-start">
                         {project.technos.map((techno, index) => {
-                          return (
+                          const technoLink = technoLinks[techno];
+                          return technoLink ? (
+                            <Link
+                              key={index}
+                              href={technoLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <p className="mb-2 mr-2 inline-block cursor-pointer rounded-full bg-violet-600 px-3 py-1 text-sm font-semibold text-white transition-transform hover:-translate-y-1 hover:bg-violet-700">
+                                {techno}
+                              </p>
+                            </Link>
+                          ) : (
                             <p
                               className="mb-2 mr-2 inline-block rounded-full bg-violet-600 px-3 py-1 text-sm font-semibold text-white transition-transform hover:-translate-y-1"
                               key={index}
