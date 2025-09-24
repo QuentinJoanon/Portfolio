@@ -26,7 +26,14 @@ const technoLinks: { [key: string]: string } = {
   'Fabric.js': 'http://fabricjs.com/',
   'Webpack': 'https://webpack.js.org/',
   'CSS': 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-  'Responsive Design': 'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design'
+  'Responsive Design': 'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design',
+  'PostgreSQL': 'https://www.postgresql.org/',
+  'GraphQL': 'https://graphql.org/',
+  'Node.js': 'https://nodejs.org/',
+  'Express': 'https://expressjs.com/',
+  'Docker': 'https://www.docker.com/',
+  'Supabase': 'https://supabase.com/',
+  'Stripe': 'https://stripe.com/'
 };
 
 const projects: Project[] = [
@@ -37,7 +44,16 @@ const projects: Project[] = [
     image: '/mecateamcluster.webp',
     github: null,
     website: 'https://www.mecateamcluster.org/',
-    technos: ['Next.js', 'Typescript', 'Wordpress Headless', 'Sass'],
+    technos: ['Next.js', 'Typescript', 'Wordpress Headless', 'Sass', 'GraphQL'],
+  },
+  {
+    name: 'TAOD',
+    description:
+      'Plateforme SaaS de création de formulaires pondérés et personnalisables avec analyse avancée et fonctionnalités de comparaison.',
+    image: '/taod.webp',
+    github: undefined,
+    website: 'https://take-an-objective-decision.vercel.app/',
+    technos: ['Next.js', 'Typescript', 'Supabase', 'Stripe', 'TailwindCSS'],
   },
   {
     name: 'Party Memory',
@@ -55,7 +71,7 @@ const projects: Project[] = [
     image: '/mercifacteur.png',
     github: undefined,
     website: 'https://www.merci-facteur.com/cartes/r13-deces-et-condoleances/c71-faire-part-deces/9673-faire-part-de-dn-cn-s-no-l-encre-de-chine/#top-from-categries',
-    technos: ['React', 'TailwindCSS', 'Bootstrap', 'Fabric.js'],
+    technos: ['React', 'TailwindCSS', 'Bootstrap', 'Fabric.js', 'PostgreSQL', 'Docker'],
   },
   {
     name: 'Wifeo - Landing Pages',
