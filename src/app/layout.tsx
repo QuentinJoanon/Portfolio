@@ -12,6 +12,16 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        {/* Google Tag Manager */}
+        <script dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WD9P6KZV');`
+        }} />
+        {/* End Google Tag Manager */}
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="LlSauuJ7yTB1YQ0IcznVnNVey6wFMMgz1eGTSxEa1W8" />
         <meta name="author" content="Quentin Joanon" />
@@ -40,6 +50,17 @@ export default function RootLayout({
         />
       </head>
       <body className="dark:bg-stone-900">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WD9P6KZV"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+
         <ThemeProvider enableSystem={true} attribute="class">
           <Navbar />
           {children}
