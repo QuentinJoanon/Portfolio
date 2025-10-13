@@ -13,6 +13,7 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google-site-verification" content="LlSauuJ7yTB1YQ0IcznVnNVey6wFMMgz1eGTSxEa1W8" />
         <meta name="author" content="Quentin Joanon" />
         <meta name="keywords" content="développeur web, JavaScript, React, Next.js, Node.js, Redux, TypeScript, portfolio, développeur frontend, développeur fullstack" />
         <link rel="canonical" href="https://quentinjoanon.vercel.app/" />
