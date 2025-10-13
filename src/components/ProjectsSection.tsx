@@ -47,12 +47,12 @@ const projects: Project[] = [
     technos: ['Next.js', 'Typescript', 'Wordpress Headless', 'Sass', 'GraphQL'],
   },
   {
-    name: 'TAOD',
+    name: 'Objectively',
     description:
-      'Plateforme SaaS de création de formulaires pondérés et personnalisables avec analyse avancée et fonctionnalités de comparaison.',
-    image: '/taod.webp',
+      'Plateforme SaaS d\'évaluation collaborative pour décision objective en équipe.',
+    image: '/objectively.webp',
     github: undefined,
-    website: 'https://take-an-objective-decision.vercel.app/',
+    website: 'https://objectively.fr/',
     technos: ['Next.js', 'Typescript', 'Supabase', 'Stripe', 'TailwindCSS'],
   },
   {
