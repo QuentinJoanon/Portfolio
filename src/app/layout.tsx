@@ -22,19 +22,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }} />
         {/* End Google Tag Manager */}
 
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEDGJNY3GM"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BEDGJNY3GM');
-`
-        }} />
-        {/* End Google tag */}
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="LlSauuJ7yTB1YQ0IcznVnNVey6wFMMgz1eGTSxEa1W8" />
         <meta name="author" content="Quentin Joanon" />
