@@ -89,7 +89,7 @@ const ProjectsSection = () => {
     <section id="projects">
       <h1 className="text-center text-4xl font-bold">
         Mes projets
-        <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-violet-600" />
+        <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400" />
       </h1>
       <div className="flex flex-col space-y-28">
         {projects.map((project, index) => {
@@ -144,13 +144,13 @@ const ProjectsSection = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <p className="mb-2 mr-2 inline-block cursor-pointer rounded-full bg-violet-600 px-3 py-1 text-sm font-semibold text-white transition-transform hover:-translate-y-1 hover:bg-violet-700">
+                              <p className="mb-2 mr-2 inline-block cursor-pointer rounded-full bg-gradient-to-r from-purple-500 to-purple-600 px-3 py-1 text-sm font-semibold text-white transition-transform hover:-translate-y-1 hover:brightness-110">
                                 {techno}
                               </p>
                             </Link>
                           ) : (
                             <p
-                              className="mb-2 mr-2 inline-block rounded-full bg-violet-600 px-3 py-1 text-sm font-semibold text-white transition-transform hover:-translate-y-1"
+                              className="mb-2 mr-2 inline-block rounded-full bg-gradient-to-r from-purple-500 to-purple-600 px-3 py-1 text-sm font-semibold text-white transition-transform hover:-translate-y-1"
                               key={index}
                             >
                               {techno}

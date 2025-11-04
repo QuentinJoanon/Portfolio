@@ -17,7 +17,7 @@ const HeroSection = () => {
           </h1>
           <p className=" mb-6 mt-4 text-lg md:text-2xl">
             Je suis{' '}
-            <span className="font-semibold text-violet-600">
+            <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 bg-clip-text font-semibold text-transparent">
               Quentin Joanon
             </span>
             . Un Développeur Front-End passionné situé au dessus de Lyon en
@@ -25,7 +25,7 @@ const HeroSection = () => {
           </p>
           <Link
             to="projects"
-            className="rounded bg-violet-600 px-6 py-3 font-semibold text-neutral-100 shadow-lg hover:bg-violet-700"
+            className="rounded bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 px-6 py-3 font-semibold text-white shadow-lg transition-transform hover:scale-105"
             activeClass="true"
             spy={true}
             smooth={true}

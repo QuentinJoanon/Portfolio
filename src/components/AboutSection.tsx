@@ -22,7 +22,7 @@ const AboutSection = () => {
       <div className="my-12 pb-12 md:pb-48 md:pt-16">
         <h1 className="text-center text-4xl font-bold">
           A propos de moi
-          <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-violet-600" />
+          <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400" />
         </h1>
         <div className="justify-cente flex flex-col items-stretch space-y-10 align-top md:flex-row md:space-x-10  md:space-y-0 md:p-4 md:text-left">
           <div className="md:w-1/2">
@@ -31,7 +31,7 @@ const AboutSection = () => {
             </h1>
             <p>
               Salut ! Je suis Quentin, un{' '}
-              <span className="font-semibold text-violet-600">
+              <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 bg-clip-text font-semibold text-transparent">
                 Développeur Front-End
               </span>{' '}
               freelance basé dans la région Chalonnaise, juste au-dessus de
@@ -43,11 +43,11 @@ const AboutSection = () => {
             <p>
               J'adore façonner des expériences web engageantes et repousser les
               limites de l'
-              <span className="font-semibold text-violet-600">innovation</span>.
+              <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 bg-clip-text font-semibold text-transparent">innovation</span>.
               Chaque projet que j'entreprends devient une opportunité
               d'apprendre et de grandir. Si vous partagez cette passion ou si
               vous avez une vision à concrétiser, n'hésitez pas à me{' '}
-              <span className="font-semibold text-violet-600">contacter</span>.
+              <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 bg-clip-text font-semibold text-transparent">contacter</span>.
               Ensemble, créons quelque chose d'extraordinaire !
             </p>
           </div>
@@ -59,7 +59,7 @@ const AboutSection = () => {
               {skills.map((skill, index) => {
                 return (
                   <p
-                    className="mb-2 mr-2 inline-block rounded-full bg-violet-600 px-3 py-1 text-sm font-semibold text-white"
+                    className="mb-2 mr-2 inline-block rounded-full bg-gradient-to-r from-purple-500 to-purple-600 px-3 py-1 text-sm font-semibold text-white"
                     key={index}
                   >
                     {skill.skill}
