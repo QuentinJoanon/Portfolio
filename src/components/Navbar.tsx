@@ -4,6 +4,7 @@ import { Link } from 'react-scroll/modules';
 import { useTheme } from 'next-themes';
 import { RiSunLine, RiMoonLine } from 'react-icons/ri';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
+import Image from 'next/image';
 
 interface NavItem {
   label: string;
@@ -27,8 +28,19 @@ const Navbar = () => {
         <div>
           <div className="flex items-center justify-between py-3">
             <Link to="home">
-              <div className="md: md: block py-5">
-                <h2 className="text-2xl font-bold">Quentin Joanon</h2>
+              <div className="md: md: flex items-center gap-3 py-5">
+                <Image
+                  src="/logo_portfolio_fond_transparent.png"
+                  alt="Logo Quentin Joanon"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10"
+                  priority
+                  unoptimized
+                />
+                <h2 className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 bg-clip-text text-2xl font-bold text-transparent">
+                  Quentin Joanon
+                </h2>
               </div>
             </Link>
             <div className="md:hidden">
