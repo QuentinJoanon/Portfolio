@@ -1,86 +1,72 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs';
+import { BsArrowUpRightSquare } from 'react-icons/bs';
 import SlideUp from './SideUp';
 
 type Project = {
   name: string;
   description: string;
   image: string;
-  github?: string | null;
+  slug: string;
   website: string;
   technos: string[];
+  highlight?: string;
 };
+
 
 const technoLinks: { [key: string]: string } = {
   'Next.js': 'https://nextjs.org/',
-  'Typescript': 'https://www.typescriptlang.org/',
-  'Wordpress Headless': 'https://wordpress.org/',
+  'TypeScript': 'https://www.typescriptlang.org/',
+  'WordPress Headless': 'https://wordpress.org/',
   'Sass': 'https://sass-lang.com/',
   'React': 'https://react.dev/',
   'TailwindCSS': 'https://tailwindcss.com/',
-  'Firebase': 'https://firebase.google.com/',
-  'Shadcn': 'https://ui.shadcn.com/',
-  'Bootstrap': 'https://getbootstrap.com/',
-  'Fabric.js': 'http://fabricjs.com/',
-  'Webpack': 'https://webpack.js.org/',
-  'CSS': 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-  'Responsive Design': 'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design',
-  'PostgreSQL': 'https://www.postgresql.org/',
   'GraphQL': 'https://graphql.org/',
-  'Node.js': 'https://nodejs.org/',
-  'Express': 'https://expressjs.com/',
-  'Docker': 'https://www.docker.com/',
   'Supabase': 'https://supabase.com/',
-  'Stripe': 'https://stripe.com/'
+  'Stripe': 'https://stripe.com/',
+  'PWA': 'https://web.dev/progressive-web-apps/',
+  'IndexedDB': 'https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API',
+  'Service Workers': 'https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API',
 };
 
 const projects: Project[] = [
   {
-    name: 'MecateamCluster',
+    name: 'Kronozen',
     description:
-      'Le réseau des entreprises de la filière des infrastructures et des engins de travaux ferroviaires.',
-    image: '/mecateamcluster.webp',
-    github: null,
-    website: 'https://www.mecateamcluster.org/',
-    technos: ['Next.js', 'Typescript', 'Wordpress Headless', 'Sass', 'GraphQL'],
+      'Une app de pointage pour artisans. Mon père est menuisier, je l\'ai faite à partir de ses besoins.',
+    image: '/kronozen.webp',
+    slug: 'kronozen',
+    website: 'https://kronozen.fr',
+    technos: ['Next.js', 'TypeScript', 'Supabase', 'PWA', 'TailwindCSS'],
+    highlight: 'Mon projet perso',
   },
   {
     name: 'Objectively',
     description:
-      'Plateforme SaaS d\'évaluation collaborative pour décision objective en équipe.',
+      'Un SaaS pour prendre des décisions en équipe avec des grilles d\'évaluation. Utilisé par Le Cèdre (groupement d\'achat). Stripe intégré, multi-tenancy.',
     image: '/objectively.webp',
-    github: undefined,
+    slug: 'objectively',
     website: 'https://objectively.fr/',
-    technos: ['Next.js', 'Typescript', 'Supabase', 'Stripe', 'TailwindCSS'],
+    technos: ['Next.js', 'TypeScript', 'Supabase', 'Stripe', 'TailwindCSS'],
   },
   {
-    name: 'Party Memory',
+    name: 'Alobees',
     description:
-      "Party Memory est une plateforme de création et de partage de souvenir d'évènements et soirées.",
-    image: '/partymemory.png',
-    github: undefined,
-    website: 'https://www.partymemory.com/',
-    technos: ['React', 'Typescript', 'TailwindCSS', 'Firebase', 'Shadcn'],
+      'Automatisation pour une app de suivi de chantier. Des scripts pour faire communiquer le terrain et le bureau.',
+    image: '/alobees.webp',
+    slug: 'alobees',
+    website: 'https://alobees.com/',
+    technos: ['Google Apps Script', 'API REST', 'JavaScript'],
   },
   {
-    name: 'Merci-Facteur',
+    name: 'MecateamCluster',
     description:
-      "Éditeur en ligne de cartes postales, cartes de condoléances, d'anniversaire, de vœux et autres créations personnalisées.",
-    image: '/mercifacteur.png',
-    github: undefined,
-    website: 'https://www.merci-facteur.com/cartes/r13-deces-et-condoleances/c71-faire-part-deces/9673-faire-part-de-dn-cn-s-no-l-encre-de-chine/#top-from-categries',
-    technos: ['React', 'TailwindCSS', 'Bootstrap', 'Fabric.js', 'PostgreSQL', 'Docker'],
-  },
-  {
-    name: 'Wifeo - Landing Pages',
-    description:
-      "Développement de landing pages responsives pour les coaches sportifs, optimisées pour la conversion et l'expérience utilisateur.",
-    image: '/wifeo.png',
-    github: undefined,
-    website: 'https://www.wifeo.com/landing_coach_sportif',
-    technos: ['React', 'Webpack', 'Bootstrap', 'CSS', 'Responsive Design'],
+      'Refonte du site d\'un réseau d\'entreprises ferroviaires. WordPress en back, Next.js en front.',
+    image: '/mecateamcluster.webp',
+    slug: 'mecateamcluster',
+    website: 'https://www.mecateamcluster.org/',
+    technos: ['Next.js', 'TypeScript', 'WordPress Headless', 'Sass', 'GraphQL'],
   },
 ];
 
@@ -88,9 +74,14 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <h1 className="text-center text-4xl font-bold">
-        Mes projets
-        <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400" />
+        Projets
+        <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-neutral-300 dark:bg-neutral-600" />
       </h1>
+
+      <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-neutral-600 dark:text-neutral-400">
+        Les projets que j'ai construits et qui tournent.
+      </p>
+
       <div className="flex flex-col space-y-28">
         {projects.map((project, index) => {
           return (
@@ -98,63 +89,65 @@ const ProjectsSection = () => {
               <SlideUp offset="-300px 0px -300px 0px">
                 <div className="animation-delay-2 flex animate-slideUpCubicBezier flex-col md:flex-row md:space-x-12">
                   <div className="object-contain md:w-1/2">
-                    <Link href={project.website} target="blank">
+                    <Link href={`/projets/${project.slug}`}>
                       <Image
                         src={project.image}
-                        alt=""
+                        alt={project.name}
                         width={1000}
                         height={800}
                         className="rounded-xl shadow-xl transition-opacity hover:opacity-70"
                       />
                     </Link>
                   </div>
-                  <div className="md:w-1/2">
-                    <h1 className="mb-6 text-4xl font-bold">{project.name}</h1>
-                    <p className="mb-4 text-xl leading-7 dark:text-neutral-400">
+                  <div className="mt-6 md:mt-0 md:w-1/2">
+                    {project.highlight && (
+                      <span className="mb-2 inline-block rounded-full bg-neutral-200 dark:bg-neutral-700 px-3 py-1 text-sm">
+                        {project.highlight}
+                      </span>
+                    )}
+                    <h2 className="mb-4 text-3xl font-bold md:text-4xl">{project.name}</h2>
+                    <p className="mb-4 text-lg leading-7 text-neutral-600 dark:text-neutral-400">
                       {project.description}
                     </p>
-                    <div className="flex flex-row space-x-4 align-bottom">
-                      {project.github && (
-                        <Link href={project.github} target="blank">
-                          <BsGithub
-                            size={30}
-                            className="cursor-pointer transition-transform hover:-translate-y-1"
-                          />
-                        </Link>
-                      )}
-                      <Link href={project.website} target="blank">
-                        {' '}
+                    <div className="mb-4 flex flex-row items-center space-x-4">
+                      <Link
+                        href={`/projets/${project.slug}`}
+                        className="font-semibold text-purple-500 transition-colors hover:text-purple-600"
+                      >
+                        Voir le détail →
+                      </Link>
+                      <Link href={project.website} target="_blank">
                         <BsArrowUpRightSquare
-                          size={30}
+                          size={24}
                           className="cursor-pointer transition-transform hover:-translate-y-1"
                         />
                       </Link>
                     </div>
-                    <div className="md:w-1/2">
-                      <h2 className="my-6 text-center text-xl font-bold md:text-left">
-                        Technos utilisées
-                      </h2>
-                      <div className="flex flex-wrap justify-center md:justify-start">
-                        {project.technos.map((techno, index) => {
+                    <div>
+                      <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-neutral-500">
+                        Technologies
+                      </h3>
+                      <div className="flex flex-wrap">
+                        {project.technos.map((techno, idx) => {
                           const technoLink = technoLinks[techno];
                           return technoLink ? (
                             <Link
-                              key={index}
+                              key={idx}
                               href={technoLink}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <p className="mb-2 mr-2 inline-block cursor-pointer rounded-full bg-gradient-to-r from-purple-500 to-purple-600 px-3 py-1 text-sm font-semibold text-white transition-transform hover:-translate-y-1 hover:brightness-110">
+                              <span className="mb-2 mr-2 inline-block cursor-pointer rounded-full bg-neutral-200 dark:bg-neutral-700 px-3 py-1 text-sm transition-colors hover:bg-neutral-300 dark:hover:bg-neutral-600">
                                 {techno}
-                              </p>
+                              </span>
                             </Link>
                           ) : (
-                            <p
-                              className="mb-2 mr-2 inline-block rounded-full bg-gradient-to-r from-purple-500 to-purple-600 px-3 py-1 text-sm font-semibold text-white transition-transform hover:-translate-y-1"
-                              key={index}
+                            <span
+                              className="mb-2 mr-2 inline-block rounded-full bg-neutral-200 dark:bg-neutral-700 px-3 py-1 text-sm"
+                              key={idx}
                             >
                               {techno}
-                            </p>
+                            </span>
                           );
                         })}
                       </div>
