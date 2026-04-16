@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:kronozen.fr)",
+      "WebFetch(domain:objectively.fr)"
+    ]
+  }
+}

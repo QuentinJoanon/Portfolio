@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Quentin JOANON : Développeur Web Fullstack',
     description: 'Développeur web fullstack freelance. React, Next.js, TypeScript, Supabase. Applications web modernes, SaaS, sites performants.',
-    url: 'https://quentinjoanon.dev/',
+    url: 'https://www.quentinjoanon.dev/',
     siteName: 'Portfolio Quentin Joanon',
     locale: 'fr_FR',
     type: 'website',
     images: [
       {
-        url: 'https://quentinjoanon.dev/quentin_joanon.webp',
+        url: 'https://www.quentinjoanon.dev/quentin_joanon.webp',
         width: 1200,
         height: 630,
         alt: 'Quentin Joanon - Développeur Web Fullstack'
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Quentin JOANON : Développeur Web Fullstack',
     description: 'Développeur web fullstack freelance. React, Next.js, TypeScript, Supabase.',
-    images: ['https://quentinjoanon.dev/quentin_joanon.webp']
+    images: ['https://www.quentinjoanon.dev/quentin_joanon.webp']
   },
   robots: {
     index: true,

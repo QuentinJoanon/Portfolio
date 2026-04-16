@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <meta name="google-site-verification" content="LlSauuJ7yTB1YQ0IcznVnNVey6wFMMgz1eGTSxEa1W8" />
         <meta name="author" content="Quentin Joanon" />
         <meta name="keywords" content="développeur web, JavaScript, React, Next.js, Node.js, Redux, TypeScript, portfolio, développeur frontend, développeur fullstack" />
-        <link rel="canonical" href="https://quentinjoanon.vercel.app/" />
+        <link rel="canonical" href="https://www.quentinjoanon.dev/" />
 
         {/* Schema.org JSON-LD */}
         <script
@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'Quentin Joanon',
-              url: 'https://quentinjoanon.vercel.app/',
+              url: 'https://www.quentinjoanon.dev/',
               jobTitle: 'Développeur Web JavaScript',
               description: 'Développeur web spécialisé en JavaScript, React, Next.js et Node.js',
               sameAs: [
